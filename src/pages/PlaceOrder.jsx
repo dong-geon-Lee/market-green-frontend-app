@@ -389,7 +389,10 @@ const PlaceOrder = () => {
             <CenterWrapper key={item.product}>
               <Center>
                 <ImgBox>
-                  <Image src={`http://localhost:5000/${item.img}`} alt="make" />
+                  <Image
+                    src={`${process.env.REACT_APP_BASEURL}/${item.img}`}
+                    alt="make"
+                  />
                 </ImgBox>
 
                 <InfoListBox>

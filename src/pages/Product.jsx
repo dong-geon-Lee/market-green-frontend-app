@@ -458,15 +458,6 @@ const Product = () => {
 
   const productData = useSelector((state) => state.product);
   const { product, message } = productData;
-
-  // const userId = useSelector((state) => state.user.user);
-
-  // const findReviewId = product?.reviews
-  //   ?.map((data) => data)
-  //   ?.filter((f) => f.user === userId._id);
-
-  // const reviewId = findReviewId?.map((n) => n.user)?.join("") === userId._id;
-
   const isLoading = useSelector((state) => state.spinner.isLoading);
 
   const { id } = useParams();
@@ -494,14 +485,7 @@ const Product = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    // dispatch(onSpinner(true));
-
-    // setTimeout(() => {
-    //   dispatch(offSpinner(false));
-    // }, 1500);
-
     dispatch(addReview({ id, rating, comment }));
-
     setRating("");
     setComment("");
   };
@@ -645,9 +629,3 @@ const Product = () => {
 };
 
 export default Product;
-
-// Good
-// "/users/:id" => <Users /> // useParams().id
-
-// Good
-// "/search?keyword=something" : <Search /> // useLocation().search

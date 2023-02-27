@@ -265,30 +265,18 @@ export const CenterWrapper = styled.div`
 
 const OrderScreen = () => {
   const { id: orderId } = useParams();
-
-  const [sdkReady, setSdkReady] = useState(false);
-
+  const [, setSdkReady] = useState(false);
   const orderInfo = useSelector((state) => state.order);
-  const { loading, error, orderDetails, itemsPrice, order } = orderInfo;
-
+  const { orderDetails } = orderInfo;
   const orderPay = useSelector((state) => state.order);
-  const { loadingPay, successPay } = orderPay;
+  const { successPay } = orderPay;
 
   const dispatch = useDispatch();
-
-  console.log(orderDetails);
-
-  const { orderItems } = orderDetails;
-
-  const itemPrice = orderItems?.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
 
   useEffect(() => {
     const addPaypalScript = async () => {
       const { data: clientId } = await axios.get(
-        "http://localhost:5000/api/paypal"
+        `${process.env.REACT_APP_BASEURL}/api/paypal`
       );
 
       const script = document.createElement("script");
@@ -304,7 +292,6 @@ const OrderScreen = () => {
     if (!orderDetails || successPay) {
       dispatch(orderPayReset());
       dispatch(getOrderDetails({ id: orderId }));
-      // dispatch(orderItemsPrice(itemPrice));
     } else if (!orderDetails.isPaid) {
       if (!window.paypal) {
         addPaypalScript();
@@ -317,11 +304,8 @@ const OrderScreen = () => {
   }, [dispatch, orderId, successPay]);
 
   const successPaymentHandler = (paymentResult) => {
-    console.log(paymentResult, "결과");
     dispatch(payOrder({ orderId, paymentResult }));
-
     alert("결제 완료 ");
-
     setTimeout(() => {
       localStorage.setItem("paymentResult", JSON.stringify(paymentResult));
       dispatch(deleteStorage());

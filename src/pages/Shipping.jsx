@@ -171,9 +171,3 @@ const Shipping = () => {
 };
 
 export default Shipping;
-
-// 수령인
-// 주소
-// 연락처
-// 도로명
-// 배송메모

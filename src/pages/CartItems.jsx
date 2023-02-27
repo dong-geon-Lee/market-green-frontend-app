@@ -215,7 +215,7 @@ const CartItems = ({ product, title, price, img, qty }) => {
       <ProductGroup>
         <OrderBtn onClick={() => removeItemCart(product)}>x</OrderBtn>
         <ImgBox>
-          <Image src={`http://localhost:5000/${img}`} alt="make" />
+          <Image src={`${process.env.REACT_APP_BASEURL}/${img}`} alt="make" />
         </ImgBox>
 
         <InfoBox>
