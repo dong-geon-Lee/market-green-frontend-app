@@ -519,7 +519,7 @@ const Product = () => {
         <Left>
           <ImgBox>
             <Image
-              src={`http://localhost:5000/${product?.img}`}
+              src={`${process.env.REACT_APP_BASEURL}/${product?.img}`}
               alt="take your image"
             />
           </ImgBox>
