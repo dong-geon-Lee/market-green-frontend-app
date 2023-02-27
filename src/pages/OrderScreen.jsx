@@ -310,7 +310,7 @@ const OrderScreen = () => {
       localStorage.setItem("paymentResult", JSON.stringify(paymentResult));
       dispatch(deleteStorage());
       localStorage.removeItem("cartItems");
-      window.location.href = "/paymentResult";
+      window.location.href = "/";
     }, 3000);
   };
 
@@ -390,7 +390,10 @@ const OrderScreen = () => {
             <CenterWrapper key={item.product}>
               <Center>
                 <ImgBox>
-                  <Image src={`http://localhost:5000/${item.img}`} alt="make" />
+                  <Image
+                    src={`${process.env.REACT_APP_BASEURL}/${item.img}`}
+                    alt="make"
+                  />
                 </ImgBox>
 
                 <InfoListBox>
