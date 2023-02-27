@@ -202,14 +202,14 @@ const Footer = () => {
           <ContactTitle>Contact us</ContactTitle>
           <TextBox>
             <TextLink
-              href="https://github.com/dong-geon-Lee/Market-Green-Frontend/tree/dev"
+              href="https://github.com/dong-geon-Lee/market-green-frontend-app"
               target="_blank"
             >
               <strong>Front-end</strong> <br></br>
-              https://github.com/dong-geon-Lee/Market-Green-Frontend
+              https://github.com/dong-geon-Lee/market-green-frontend-app
             </TextLink>
             <TextLink
-              href="https://github.com/dong-geon-Lee/Market-Green-Backend/tree/dev"
+              href="https://github.com/dong-geon-Lee/Market-Green-Backend"
               target="_blank"
             >
               <strong>Back-end</strong> <br></br>

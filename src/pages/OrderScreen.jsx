@@ -310,7 +310,7 @@ const OrderScreen = () => {
       localStorage.setItem("paymentResult", JSON.stringify(paymentResult));
       dispatch(deleteStorage());
       localStorage.removeItem("cartItems");
-      window.location.href = "/";
+      window.location.href = "/paymentResult";
     }, 3000);
   };
 
