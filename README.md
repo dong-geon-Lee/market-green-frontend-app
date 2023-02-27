@@ -1,11 +1,8 @@
 # :star: **Service Intro**
+### 당신의 집안을 아름다운 식물로 꾸며보세요.
 
-## 당신의 집안을 아름다운 식물로 꾸며보세요.
-
-`MarketGreen은 다양하고 예쁜 식물을 제공해드리는 서비스입니다. `
-
+MarketGreen은 다양하고 예쁜 식물을 제공해드리는 서비스입니다.
 - 렌딩페이지 및 제품(식물) 살펴보기
-
    > 랜딩 페이지에서 Start find plant 버튼을 클릭하여 식물 목록을 확인해보세요.
 
 - 관심있는 식물을 발견하면 [ 자세히 보기 ] 버튼을 눌러 보세요.
@@ -16,11 +13,24 @@
 
    > Hamburger Menu를 클릭해서 회원가입과 로그인 절차를 진행해주세요.  
    > 회원은 식물 구입과 리뷰 작성이 가능해요.    
-    
+</br>
+</br>
+
 # 🔎 **Service Purpose**
 
     MarketGreen 서비스는 아름답고 희귀한 식물을 제공합니다. 
     친환경적이고 아름다운 식물로 당신의 공간을 채워보세요!
+
+
+관리자 계정 
+- 아이디 admin@naver.com
+- 패스워드 1234
+
+페이팔 계정 
+- 아이디 : sb-byazh16150975@personal.example.com
+- 패스워드 : 12345678
+
+</br>
 
 # :bust_in_silhouette: **About Us**
 
@@ -32,12 +42,12 @@
 
 ### **Link**
 
-- [https://market-green-app.herokuapp.com](https://market-green-app.herokuapp.com)
+- https://market-green-frontend-app.onrender.com
 
 
 ### **Repository**
 
-- [Client repository](https://github.com/dong-geon-Lee/Market-Green-Frontend)
+- [Client repository](https://github.com/dong-geon-Lee/market-green-frontend-app)
 - [Server repository](https://github.com/dong-geon-Lee/Market-Green-Backend)
 
 ### **OPTIMIZED CREW (OC)**
@@ -46,10 +56,12 @@ Crew | Role | GitHub
 ----- | ----- | -----
 💻이동건 | Full-stack	| https://github.com/dong-geon-Lee
 
+</br>
+
 # :wrench: **Tech Stack**. 
 - ### **Front-end**
       
-  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=fff)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=fff)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=fff)
 ![JAVASCRIPT](https://img.shields.io/badge/JavaScript-343a40?style=for-the-badge&logo=JavaScript&logoColor=F7DF1E)
 ![styled-components](https://img.shields.io/badge/styled--Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=fff)  
@@ -59,24 +71,26 @@ Crew | Role | GitHub
 
 - ### **Back-end**
   
-  ![Node.js](https://img.shields.io/badge/NODE.JS-339933?style=for-the-badge&logo=Node.js&logoColor=fff)
+![Node.js](https://img.shields.io/badge/NODE.JS-339933?style=for-the-badge&logo=Node.js&logoColor=fff)
 ![Express](https://img.shields.io/badge/EXPRESS-000000?style=for-the-badge&logo=Express&logoColor=fff)
 ![MongoDB](https://img.shields.io/badge/MONGODB-47A248?style=for-the-badge&logo=MONGODB&logoColor=fff)
 
 - ### **Deploy**
-  ![Heroku](https://img.shields.io/badge/HEROKU-430098?style=for-the-badge&logo=HEROKU&logoColor=fff)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=Render&logoColor=fff)
 
----
+
+</br>
 
 # :chart: **Flow Chart**
 
-## **Client Side**
+### **Client Side**
 ![Frame 2](https://user-images.githubusercontent.com/69576865/178134944-eabd93aa-cd1b-4128-82c8-ca5e46258abc.png)
-## **Server Side**
+### **Server Side**
 ![Frame 3](https://user-images.githubusercontent.com/69576865/178137859-d1198190-9db1-490e-b78c-84990ece83fa.png)
 
+</br>
+
 # :eyes: Web View
-+ 토클을 클릭하여 확인해 주세요  
 
 <details>
 <summary>랜딩페이지</summary>  
@@ -213,6 +227,3 @@ Crew | Role | GitHub
 <img width="600" alt=""
  src="https://user-images.githubusercontent.com/69576865/179885453-de76400b-e192-4ad4-b5e6-83cd4b2cf354.gif">
 </details>
-
-
-# market-green-frontend-app
