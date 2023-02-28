@@ -207,7 +207,6 @@ export const Message = styled.p`
 
 const ProductForm = () => {
   const isLoading = useSelector((state) => state.spinner.isLoading);
-
   const [userData, setUserData] = useState({
     img: "",
     title: "",
@@ -283,7 +282,6 @@ const ProductForm = () => {
     e.preventDefault();
 
     const formData = new FormData();
-
     formData.append("img", img);
     formData.append("title", title);
     formData.append("desc", desc);
@@ -291,7 +289,6 @@ const ProductForm = () => {
     formData.append("inStock", inStock);
 
     dispatch(setProduct(formData));
-
     dispatch(onSpinner(true));
 
     setTimeout(() => {

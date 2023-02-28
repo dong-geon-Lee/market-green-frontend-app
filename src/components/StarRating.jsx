@@ -34,39 +34,39 @@ const StarRating = ({ value }) => {
     <RatingBox>
       <Rating>
         {value >= 1 ? (
-          <FaStar></FaStar>
+          <FaStar />
         ) : value >= 0.5 ? (
-          <FaStarHalfAlt></FaStarHalfAlt>
+          <FaStarHalfAlt />
         ) : (
-          <FaRegStar></FaRegStar>
+          <FaRegStar />
         )}
         {value >= 2 ? (
-          <FaStar></FaStar>
+          <FaStar />
         ) : value >= 1.5 ? (
-          <FaStarHalfAlt></FaStarHalfAlt>
+          <FaStarHalfAlt />
         ) : (
-          <FaRegStar></FaRegStar>
+          <FaRegStar />
         )}
         {value >= 3 ? (
-          <FaStar></FaStar>
+          <FaStar />
         ) : value >= 2.5 ? (
-          <FaStarHalfAlt></FaStarHalfAlt>
+          <FaStarHalfAlt />
         ) : (
-          <FaRegStar></FaRegStar>
+          <FaRegStar />
         )}
         {value >= 4 ? (
-          <FaStar></FaStar>
+          <FaStar />
         ) : value >= 3.5 ? (
-          <FaStarHalfAlt></FaStarHalfAlt>
+          <FaStarHalfAlt />
         ) : (
-          <FaRegStar></FaRegStar>
+          <FaRegStar />
         )}
         {value >= 5 ? (
-          <FaStar></FaStar>
+          <FaStar />
         ) : value >= 4.5 ? (
-          <FaStarHalfAlt></FaStarHalfAlt>
+          <FaStarHalfAlt />
         ) : (
-          <FaRegStar></FaRegStar>
+          <FaRegStar />
         )}
       </Rating>
       <ReviewNum>({value.toFixed(1)})</ReviewNum>

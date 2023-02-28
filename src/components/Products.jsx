@@ -175,14 +175,11 @@ const Products = () => {
     };
 
     const copyList = products && productList?.slice();
-
     const filteredList =
       filter === "all"
         ? copyList
         : copyList.filter((data) => filterCallBack(data));
-
     const sortedList = filteredList.sort(comparePrice);
-
     return sortedList;
   };
 
@@ -197,7 +194,6 @@ const Products = () => {
   return (
     <Container id="products">
       <Title>Product</Title>
-
       <SelectBox>
         <ControlMenu
           value={filter}

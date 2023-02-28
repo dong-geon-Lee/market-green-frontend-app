@@ -40,11 +40,7 @@ const Admin = () => {
   return (
     <Container>
       <h1>관리자 페이지</h1>
-
       <Link to="/productForm">상품 등록하기</Link>
-      {/* <Link to="/productEdit">
-        <h1>상품 수정하기</h1>
-      </Link> */}
     </Container>
   );
 };

@@ -222,22 +222,18 @@ const About = () => {
     <Container id="about">
       <Wrapper>
         <Title>당신이 선택한 식물로 집안을 아름답게 꾸며보세요!</Title>
-
         <Section>
           <Left>
             <AboutBox>
               <SubHeading>"여러분의 정원사 마켓그린입니다"</SubHeading>
-
               <Text>
                 당신을 위한 다양한 제품이 준비되어 있습니다. 마켓 그린에는 수백
                 종의 희귀하고 친환경적인 식물이 있습니다. 우리는 당신이 기쁨과
                 평화를 느끼기를 바랍니다!
               </Text>
-
               <Text>- 마켓그린</Text>
             </AboutBox>
           </Left>
-
           <Right>
             <ImageBox>
               <Image src={image1} alt="image1"></Image>

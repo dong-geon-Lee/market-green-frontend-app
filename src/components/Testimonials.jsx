@@ -152,7 +152,6 @@ const Testimonials = () => {
     <Container id="testimonials">
       <Wrapper>
         <Title>Customer Reviews</Title>
-
         <Content>
           <SlideBox></SlideBox>
           <UserBox>
@@ -162,7 +161,6 @@ const Testimonials = () => {
                   <UserImage>
                     <Image src={data.avatar} alt="pic1"></Image>
                   </UserImage>
-
                   <User>
                     <UserTitle>{data.name}</UserTitle>
                     <UserJob>{data.designation}</UserJob>
@@ -172,7 +170,7 @@ const Testimonials = () => {
               ))}
             </Carousel>
           </UserBox>
-          <SlideBox></SlideBox>
+          <SlideBox />
         </Content>
       </Wrapper>
     </Container>

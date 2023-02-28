@@ -514,7 +514,6 @@ const Header = () => {
                 <AiOutlineClose onClick={showSidebar} />
               </LinkTag>
             </Toggle>
-
             <Content>
               <Button onClick={() => homeLink()}>
                 <BsFillHouseFill style={{ marginRight: "2rem" }} />
@@ -546,7 +545,6 @@ const Header = () => {
                       style={{ marginRight: "2rem" }}
                     >
                       <BsFillCartFill style={{ marginRight: "2rem" }} />
-
                       <CartText>{cartItems ? cartItems?.length : 0}</CartText>
                       <CartSubText>Cart</CartSubText>
                     </CartBox>

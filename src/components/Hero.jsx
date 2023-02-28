@@ -168,7 +168,6 @@ const Hero = () => {
   allLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
-
       const href = link.getAttribute("href");
 
       if (href === "#") {
@@ -180,7 +179,6 @@ const Hero = () => {
 
       if (href !== "#" && href.startsWith("#")) {
         const sectionEl = document.querySelector(href);
-
         sectionEl.scrollIntoView({ behavior: "smooth" });
       }
     });
@@ -191,17 +189,14 @@ const Hero = () => {
       <Wrapper>
         <InfoBox>
           <Title>Freshen the Air in Your House</Title>
-
           <Text>
             정원 만들기의 꿈을 실현할 수 있도록 도와드립니다. 세상을 바꿀 수
             있는 작은 것부터 시작합시다.
           </Text>
-
           <BtnBox>
             <Atag href="#products">
               <Button>Start find plant</Button>
             </Atag>
-
             <Atag href="#information">
               <Button>Learn more</Button>
             </Atag>

@@ -161,16 +161,25 @@ export const TextInfo = styled.p`
 `;
 
 export const Icon = styled.div``;
+
 export const LeftDetail = styled.div``;
+
 export const LeftImgBox = styled.div``;
+
 export const LeftImage = styled.img``;
 
 export const RightCard = styled.div``;
+
 export const RightInfo = styled.div``;
+
 export const RightTitle = styled.div``;
+
 export const RightText = styled.div``;
+
 export const RightDetail = styled.div``;
+
 export const RightImgBox = styled.div``;
+
 export const RightImage = styled.img``;
 
 const Introduce = () => {

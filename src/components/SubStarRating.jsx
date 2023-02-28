@@ -28,47 +28,46 @@ export const ReviewNum = styled(Rating)`
   margin-left: 1rem;
 `;
 
-const SubStarRating = ({ value, totalRating }) => {
+const SubStarRating = ({ totalRating }) => {
   return (
     <RatingBox>
       <Rating>
         {totalRating >= 1 ? (
-          <FaStar></FaStar>
+          <FaStar />
         ) : totalRating >= 0.5 ? (
-          <FaStarHalfAlt></FaStarHalfAlt>
+          <FaStarHalfAlt />
         ) : (
-          <FaRegStar></FaRegStar>
+          <FaRegStar />
         )}
         {totalRating >= 2 ? (
-          <FaStar></FaStar>
+          <FaStar />
         ) : totalRating >= 1.5 ? (
-          <FaStarHalfAlt></FaStarHalfAlt>
+          <FaStarHalfAlt />
         ) : (
-          <FaRegStar></FaRegStar>
+          <FaRegStar />
         )}
         {totalRating >= 3 ? (
-          <FaStar></FaStar>
+          <FaStar />
         ) : totalRating >= 2.5 ? (
-          <FaStarHalfAlt></FaStarHalfAlt>
+          <FaStarHalfAlt />
         ) : (
-          <FaRegStar></FaRegStar>
+          <FaRegStar />
         )}
         {totalRating >= 4 ? (
-          <FaStar></FaStar>
+          <FaStar />
         ) : totalRating >= 3.5 ? (
-          <FaStarHalfAlt></FaStarHalfAlt>
+          <FaStarHalfAlt />
         ) : (
-          <FaRegStar></FaRegStar>
+          <FaRegStar />
         )}
         {totalRating >= 5 ? (
-          <FaStar></FaStar>
+          <FaStar />
         ) : totalRating >= 4.5 ? (
-          <FaStarHalfAlt></FaStarHalfAlt>
+          <FaStarHalfAlt />
         ) : (
-          <FaRegStar></FaRegStar>
+          <FaRegStar />
         )}
       </Rating>
-
       <ReviewNum>({totalRating.toFixed(1)})</ReviewNum>
     </RatingBox>
   );

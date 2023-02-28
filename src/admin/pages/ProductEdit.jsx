@@ -214,11 +214,8 @@ export const MessageResult = styled(Message)`
 
 const ProductEdit = () => {
   const isLoading = useSelector((state) => state.spinner.isLoading);
-
   const { state } = useLocation();
-
   const [userData, setUserData] = useState(state);
-
   const { id, title, desc, price, inStock, img } = userData;
 
   const [imgTouched, setImgTouched] = useState(false);
@@ -285,7 +282,6 @@ const ProductEdit = () => {
     e.preventDefault();
 
     const formData = new FormData();
-
     formData.append("img", img);
     formData.append("title", title);
     formData.append("desc", desc);
@@ -293,7 +289,6 @@ const ProductEdit = () => {
     formData.append("inStock", inStock);
 
     dispatch(updateProduct({ id, formData }));
-
     dispatch(onSpinner(true));
 
     setTimeout(() => {
