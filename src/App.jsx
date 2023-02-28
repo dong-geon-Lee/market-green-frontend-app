@@ -30,46 +30,46 @@ const App = () => {
 
   return (
     <Router>
-      <Header></Header>
+      <Header />
       <Routes>
-        <Route index path="/" element={<Home />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/product/:id" element={<Product />}></Route>
-        <Route path="/cart/:id" element={<Carts />}></Route>
-        <Route path="/cart" element={<Carts></Carts>}></Route>
-        <Route path="/shipping" element={<Shipping></Shipping>}></Route>
-        <Route path="/payment" element={<Payment></Payment>}></Route>
-        <Route path="/notFound" element={<NotFound />}></Route>
+        <Route index path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/product/:id" element={<Product />} />
+        <Route path="/cart/:id" element={<Carts />} />
+        <Route path="/cart" element={<Carts />} />
+        <Route path="/shipping" element={<Shipping />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/notFound" element={<NotFound />} />
         <Route
           path="/placeorder"
           element={user ? <PlaceOrder /> : <Navigate replace to="/" />}
-        ></Route>
+        />
         <Route
           path="/order/:id"
           element={user ? <OrderScreen /> : <Navigate replace to="/" />}
-        ></Route>
+        />
         <Route
           path="/profile"
           element={user ? <Profile /> : <Navigate replace to="/" />}
-        ></Route>
-        <Route path="/paymentResult" element={<PaymentResult />}></Route>
+        />
+        <Route path="/paymentResult" element={<PaymentResult />} />
         <Route
           path="/profileEdit"
           element={user ? <ProfileEdit /> : <Navigate replace to="/" />}
-        ></Route>
+        />
         <Route
           path="/admin"
           element={admin ? <Admin /> : <Navigate replace to="/" />}
-        ></Route>
+        />
         <Route
           path="/productForm"
           element={admin ? <ProductForm /> : <Navigate replace to="/" />}
-        ></Route>
+        />
         <Route
           path="/productEdit"
           element={admin ? <ProductEdit /> : <Navigate replace to="/" />}
-        ></Route>
+        />
       </Routes>
     </Router>
   );
