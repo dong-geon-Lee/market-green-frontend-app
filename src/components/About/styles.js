@@ -1,10 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import image1 from "../assets/image1.jpg";
-import image2 from "../assets/image2.jpg";
-import image3 from "../assets/image3.jpg";
-import image4 from "../assets/image4.jpg";
-import { Mobile, Tablets, Laptops } from "../responsive";
+import { Mobile, Tablets, Laptops } from "../../responsive";
 
 export const Container = styled.div`
   max-width: 130rem;
@@ -216,36 +211,3 @@ export const Image = styled.img`
     height: "30rem",
   })}
 `;
-
-const About = () => {
-  return (
-    <Container id="about">
-      <Wrapper>
-        <Title>당신이 선택한 식물로 집안을 아름답게 꾸며보세요!</Title>
-        <Section>
-          <Left>
-            <AboutBox>
-              <SubHeading>"여러분의 정원사 마켓그린입니다"</SubHeading>
-              <Text>
-                당신을 위한 다양한 제품이 준비되어 있습니다. 마켓 그린에는 수백
-                종의 희귀하고 친환경적인 식물이 있습니다. 우리는 당신이 기쁨과
-                평화를 느끼기를 바랍니다!
-              </Text>
-              <Text>- 마켓그린</Text>
-            </AboutBox>
-          </Left>
-          <Right>
-            <ImageBox>
-              <Image src={image1} alt="image1"></Image>
-              <Image src={image2} alt="image2"></Image>
-              <Image src={image3} alt="image3"></Image>
-              <Image src={image4} alt="image4"></Image>
-            </ImageBox>
-          </Right>
-        </Section>
-      </Wrapper>
-    </Container>
-  );
-};
-
-export default About;

@@ -1,5 +1,5 @@
 import React from "react";
-import About from "../components/About";
+import About from "../components/About/About";
 import Hero from "../components/Hero";
 import Information from "../components/Information";
 import Introduce from "../components/Introduce";
