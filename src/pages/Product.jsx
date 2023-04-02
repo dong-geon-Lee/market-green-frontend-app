@@ -9,10 +9,7 @@ import {
   reviewReset,
 } from "../redux-toolkit/productSlice";
 import moment from "moment";
-import SubStarRating from "../components/SubStarRating";
-import { offSpinner, onSpinner } from "../redux-toolkit/spinnerSlice";
 import Spinner from "../components/Spinner/Spinner";
-// import StarReviews from "../components/StarReviews";
 import StarRating from "../components/StarRating/StarRating";
 import { Laptops, Mobile, Tablets } from "../responsive.js";
 
@@ -570,10 +567,10 @@ const Product = () => {
             <RatingBox>
               <Rating>평점</Rating>
 
-              <SubStarRating
+              <StarRating
                 value={product?.rating?.toFixed(1)}
                 totalRating={totalRating}
-              ></SubStarRating>
+              />
             </RatingBox>
             <QuantityBox>
               <CartText>수량</CartText>
