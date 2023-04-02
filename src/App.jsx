@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Profile from "./pages/Profile";
 import { useSelector } from "react-redux";
 import ProfileEdit from "./pages/ProfileEdit";

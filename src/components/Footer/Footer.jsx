@@ -1,8 +1,6 @@
 import React from "react";
 import * as S from "./styles";
-import { BsTwitter } from "react-icons/bs";
-import { BsInstagram } from "react-icons/bs";
-import { BsFacebook } from "react-icons/bs";
+import * as A from "../../assets/@index";
 
 const Footer = () => {
   return (
@@ -12,9 +10,9 @@ const Footer = () => {
         <S.LogoGroup>
           <S.Title>MargetGreen</S.Title>
           <S.IconBox>
-            <BsInstagram />
-            <BsFacebook />
-            <BsTwitter />
+            <A.BsInstagram />
+            <A.BsFacebook />
+            <A.BsTwitter />
           </S.IconBox>
           <S.Small>
             Copyright © 2022 by MarketGreen, Inc. All rights reserved.
