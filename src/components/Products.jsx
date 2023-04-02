@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import ProductItems from "./ProductItems";
+import ProductItems from "./ProductItems/ProductItems";
 import { getProducts } from "../redux-toolkit/productSlice";
 import Carousel from "react-elastic-carousel";
 import { Desktops, Laptops, Mobile, Tablets } from "../responsive";
