@@ -146,14 +146,12 @@ export const MessageResult = styled(Message)`
 const Login = () => {
   const isLoading = useSelector((state) => state.spinner.isLoading);
   const { error, user, isSuccess } = useSelector((state) => state.user);
-
   const [userData, setUserData] = useState({
     email: "",
     password: "",
   });
 
   const { email, password } = userData;
-
   const [emailTouched, setEmailTouched] = useState(false);
   const [passwordTouched, setPasswordTouched] = useState(false);
 
@@ -194,9 +192,7 @@ const Login = () => {
       }, 5000);
     }
 
-    if (user && isSuccess) {
-      navigate("/");
-    }
+    if (user && isSuccess) navigate("/");
   }, [dispatch, navigate, user, error]);
 
   const onSubmit = (e) => {
@@ -208,7 +204,6 @@ const Login = () => {
     };
 
     dispatch(loginUser(newUser));
-
     setUserData({
       email: "",
       password: "",
@@ -216,7 +211,6 @@ const Login = () => {
 
     setEmailTouched(false);
     setPasswordTouched(false);
-
     dispatch(onSpinner(true));
 
     setTimeout(() => {
@@ -252,7 +246,6 @@ const Login = () => {
               </Message>
             )
           )}
-
           <Box inValidPassword={passwordInputIsInvalid}>
             <Label>Password</Label>
             <Input
@@ -276,7 +269,6 @@ const Login = () => {
           <Button type="submit" disabled={!formIsValid}>
             로그인
           </Button>
-
           {error && <MessageResult>{error}</MessageResult>}
         </Form>
       </Wrapper>

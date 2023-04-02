@@ -56,7 +56,6 @@ const Label = styled.label`
 
 const Payment = () => {
   const [paymentMethod, setPaymentMethod] = useState("Paypal");
-
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
 
@@ -69,9 +68,7 @@ const Payment = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
     dispatch(savePaymentMethod(paymentMethod));
-
     navigate("/placeorder");
   };
 
@@ -88,7 +85,6 @@ const Payment = () => {
           />
           <Label>PaPal Checkout</Label>
         </PaymentBox>
-
         <Button type="submit">Continue</Button>
       </Wrapper>
     </Container>

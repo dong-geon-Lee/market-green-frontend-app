@@ -12,15 +12,15 @@ import ScrollToTop from "../components/ScrollToTop";
 const Home = () => {
   return (
     <>
-      <ScrollToTop></ScrollToTop>
-      <Hero></Hero>
-      <Introduce></Introduce>
-      <About></About>
-      <Products></Products>
-      <Testimonials></Testimonials>
-      <Information></Information>
-      <Gallery></Gallery>
-      <Footer></Footer>
+      <ScrollToTop />
+      <Hero />
+      <Introduce />
+      <About />
+      <Products />
+      <Testimonials />
+      <Information />
+      <Gallery />
+      <Footer />
     </>
   );
 };
