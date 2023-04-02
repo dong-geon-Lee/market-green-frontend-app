@@ -1,37 +1,11 @@
 import React from "react";
-import styled from "styled-components";
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-
-export const RatingBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const Rating = styled.div`
-  font-size: 2rem;
-  font-weight: 700;
-
-  & svg {
-    fill: #ebb450;
-  }
-`;
-
-export const Star = styled(Rating)`
-  font-size: 1.2rem;
-  padding: 0.8rem 0rem;
-  font-size: 1.2rem;
-`;
-
-export const ReviewNum = styled(Rating)`
-  padding: 1.2rem 1.6rem 1.2rem 0;
-  margin-left: 1rem;
-`;
+import * as S from "./styles";
+import * as A from "../../assets/@index";
 
 const SubStarRating = ({ totalRating }) => {
   return (
-    <RatingBox>
-      <Rating>
+    <S.RatingBox>
+      <S.Rating>
         {totalRating >= 1 ? (
           <FaStar />
         ) : totalRating >= 0.5 ? (
@@ -67,9 +41,9 @@ const SubStarRating = ({ totalRating }) => {
         ) : (
           <FaRegStar />
         )}
-      </Rating>
-      <ReviewNum>({totalRating.toFixed(1)})</ReviewNum>
-    </RatingBox>
+      </S.Rating>
+      <S.ReviewNum>({totalRating?.toFixed(1)})</S.ReviewNum>
+    </S.RatingBox>
   );
 };
 
