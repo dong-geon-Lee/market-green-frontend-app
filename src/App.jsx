@@ -14,7 +14,7 @@ import { useSelector } from "react-redux";
 import ProfileEdit from "./pages/ProfileEdit";
 import ProductForm from "./admin/ProductForm/ProductForm";
 import Admin from "./admin/Admin/Admin";
-import Product from "./pages/Product";
+import Product from "./pages/Product/Product";
 import ProductEdit from "./admin/ProductEdit/ProductEdit";
 import Carts from "./pages/Carts/Carts";
 import Shipping from "./pages/Shipping";
