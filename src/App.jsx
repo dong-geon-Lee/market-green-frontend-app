@@ -7,7 +7,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Register from "./pages/Register";
-import Login from "./pages/Login";
+import Login from "./pages/Login/Login";
 import Header from "./components/Header/Header";
 import Profile from "./pages/Profile";
 import { useSelector } from "react-redux";
