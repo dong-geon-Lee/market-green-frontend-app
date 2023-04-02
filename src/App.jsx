@@ -1,29 +1,31 @@
 import React from "react";
-import Home from "./pages/Home/Home";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
 } from "react-router-dom";
-import Register from "./pages/Register/Register";
-import Login from "./pages/Login/Login";
-import Header from "./components/Header/Header";
-import Profile from "./pages/Profile/Profile";
 import { useSelector } from "react-redux";
-import ProfileEdit from "./pages/ProfileEdit/ProfileEdit";
 import ProductForm from "./admin/ProductForm/ProductForm";
 import Admin from "./admin/Admin/Admin";
-import Product from "./pages/Product/Product";
 import ProductEdit from "./admin/ProductEdit/ProductEdit";
-// import Carts from "./pages/Carts/Carts";
-import Shipping from "./pages/Shipping/Shipping";
-import Payment from "./pages/Payment/Payment";
-import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
-import OrderScreen from "./pages/OrderScreen/OrderScreen";
-import PaymentResult from "./pages/PaymentResult/PaymentResult";
-import NotFound from "./pages/NotFound/NotFound";
-import { Carts } from "./pages";
+import {
+  Carts,
+  Home,
+  Login,
+  NotFound,
+  OrderScreen,
+  Payment,
+  PaymentResult,
+  PlaceOrder,
+  Product,
+  Profile,
+  ProfileEdit,
+  Register,
+  Shipping,
+} from "./pages";
+import Header from "./components/Header/Header";
+import ProtectedRoute from "./ProtectedRoute";
 
 const App = () => {
   const user = useSelector((state) => state.user.user?.accessToken);
@@ -44,7 +46,36 @@ const App = () => {
         <Route path="/notFound" element={<NotFound />} />
         <Route
           path="/placeorder"
-          element={user ? <PlaceOrder /> : <Navigate replace to="/" />}
+          element={<ProtectedRoute element={<PlaceOrder />} />}
+        />
+        <Route
+          path="/order/:id"
+          element={<ProtectedRoute element={<OrderScreen />} />}
+        />
+        <Route
+          path="/profile"
+          element={<ProtectedRoute element={<Profile />} />}
+        />
+        <Route
+          path="/profileEdit"
+          element={<ProtectedRoute element={<ProfileEdit />} />}
+        />
+        <Route
+          path="/admin"
+          element={<ProtectedRoute element={<Admin />} isAdmin />}
+        />
+        <Route
+          path="/productForm"
+          element={<ProtectedRoute element={<ProductForm />} isAdmin />}
+        />
+        <Route
+          path="/productEdit"
+          element={<ProtectedRoute element={<ProductEdit />} isAdmin />}
+        />
+
+        {/* <Route
+          path="/placeorder"
+          element={user ? <PlaceOrder  /> : <Navigate replace to="/" />}
         />
         <Route
           path="/order/:id"
@@ -70,7 +101,7 @@ const App = () => {
         <Route
           path="/productEdit"
           element={admin ? <ProductEdit /> : <Navigate replace to="/" />}
-        />
+        /> */}
       </Routes>
     </Router>
   );

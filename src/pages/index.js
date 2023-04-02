@@ -1,1 +1,13 @@
+export { default as Home } from "./Home/Home";
+export { default as Register } from "./Register/Register";
+export { default as Login } from "./Login/Login";
+export { default as Product } from "./Product/Product";
 export { default as Carts } from "./Carts/Carts";
+export { default as Shipping } from "./Shipping/Shipping";
+export { default as Payment } from "./Payment/Payment";
+export { default as NotFound } from "./NotFound/NotFound";
+export { default as PlaceOrder } from "./PlaceOrder/PlaceOrder";
+export { default as OrderScreen } from "./OrderScreen/OrderScreen";
+export { default as Profile } from "./Profile/Profile";
+export { default as PaymentResult } from "./PaymentResult/PaymentResult";
+export { default as ProfileEdit } from "./ProfileEdit/ProfileEdit";
