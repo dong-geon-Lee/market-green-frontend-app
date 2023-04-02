@@ -1,9 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import { BsTwitter } from "react-icons/bs";
-import { BsInstagram } from "react-icons/bs";
-import { BsFacebook } from "react-icons/bs";
-import { Mobile, Tablets } from "../responsive";
+import { Mobile, Tablets } from "../../responsive";
 
 export const Container = styled.div`
   max-width: 130rem;
@@ -181,68 +177,8 @@ export const TextBox = styled.div`
   text-align: left;
 `;
 
-const Footer = () => {
-  return (
-    <Container id="footer">
-      <hr />
-      <Wrapper>
-        <LogoGroup>
-          <Title>MargetGreen</Title>
-          <IconBox>
-            <BsInstagram></BsInstagram>
-            <BsFacebook></BsFacebook>
-            <BsTwitter></BsTwitter>
-          </IconBox>
-          <Small>
-            Copyright © 2022 by MarketGreen, Inc. All rights reserved.
-          </Small>
-        </LogoGroup>
+export const Br = styled.br``;
 
-        <ContactGroup>
-          <ContactTitle>Contact us</ContactTitle>
-          <TextBox>
-            <TextLink
-              href="https://github.com/dong-geon-Lee/market-green-frontend-app"
-              target="_blank"
-            >
-              <strong>Front-end</strong> <br></br>
-              https://github.com/dong-geon-Lee/market-green-frontend-app
-            </TextLink>
-            <TextLink
-              href="https://github.com/dong-geon-Lee/Market-Green-Backend"
-              target="_blank"
-            >
-              <strong>Back-end</strong> <br></br>
-              https://github.com/dong-geon-Lee/Market-Green-Backend
-            </TextLink>
-          </TextBox>
-        </ContactGroup>
+export const Hr = styled.hr``;
 
-        <AccountGroup>
-          <AccountTitle>Account</AccountTitle>
-          <Text>Create account</Text>
-          <Text>Sign in</Text>
-          <Text>Ios app</Text>
-          <Text>Android app</Text>
-        </AccountGroup>
-
-        <CompanyGroup>
-          <CompanyTitle>Company</CompanyTitle>
-          <Text>About Marketgreen</Text>
-          <Text>For Business</Text>
-          <Text>ParterShip</Text>
-          <Text>Careers</Text>
-        </CompanyGroup>
-
-        <ResourceGroup>
-          <ResourceTitle>Resources</ResourceTitle>
-          <Text>Help center</Text>
-          <Text>Privacy & terms</Text>
-          <Text>Plant information</Text>
-        </ResourceGroup>
-      </Wrapper>
-    </Container>
-  );
-};
-
-export default Footer;
+export const Strong = styled.strong``;

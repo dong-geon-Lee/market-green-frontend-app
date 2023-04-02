@@ -6,7 +6,7 @@ import Introduce from "../components/Introduce";
 import Products from "../components/Products";
 import Testimonials from "../components/Testimonials";
 import Gallery from "../components/Gallery";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
