@@ -1,10 +1,6 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import { addToCart, deleteStorage } from "../redux-toolkit/cartSlice";
-import CartItems from "./CartItems";
 import styled from "styled-components";
-import { Laptops, Mobile, Tablets } from "../responsive";
+import { Laptops, Mobile, Tablets } from "../../responsive";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -146,83 +142,4 @@ export const Total = styled.p`
   color: blue;
 `;
 
-const Carts = () => {
-  const cart = useSelector((state) => state.cart);
-  const { cartItems } = cart;
-
-  const id = useParams();
-  const location = useLocation();
-
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const quantity = location.search ? Number(location.search.split("=")[1]) : 1;
-  const user = useSelector((state) => state.user.user);
-
-  useEffect(() => {
-    if (id && location.search) {
-      dispatch(addToCart({ id, quantity }));
-    }
-  }, [dispatch, id, quantity]);
-
-  const onClickHandler = () => {
-    if (user === null) {
-      alert("로그인 해주세요");
-      navigate("/login");
-
-      localStorage.removeItem("cartItems");
-      dispatch(deleteStorage());
-    } else {
-      navigate("/shipping");
-    }
-  };
-
-  return (
-    <Container>
-      <Group>
-        <TotalCartItem>
-          <h1>장바구니 ({cartItems ? cartItems?.length : 0})</h1>
-        </TotalCartItem>
-
-        {cartItems.length === 0 ? (
-          <>
-            <h1>카트에 제품을 추가해주세요</h1>
-            <CartButtonGroup>
-              <CartLink to="/" style={{ width: "100%" }}>
-                쇼핑하기
-              </CartLink>
-            </CartButtonGroup>
-          </>
-        ) : (
-          <>
-            {cartItems?.map((cart, index) => (
-              <CartItems key={index} {...cart} qty={cart.quantity}></CartItems>
-            ))}
-
-            <Wrapper>
-              <TotalBox>
-                <Total>TOTAL :</Total>
-                <TotalText>
-                  {cartItems
-                    ?.reduce((acc, item) => {
-                      return acc + item.quantity * item.price;
-                    }, 0)
-                    .toString()
-                    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}
-                  원
-                </TotalText>
-              </TotalBox>
-            </Wrapper>
-
-            <CartButtonGroup>
-              <CartLink to="/">쇼핑하기</CartLink>
-              <Button onClick={() => onClickHandler()}>결제하기</Button>
-            </CartButtonGroup>
-          </>
-        )}
-      </Group>
-    </Container>
-  );
-};
-
-export default Carts;
+export const Title = styled.h1``;

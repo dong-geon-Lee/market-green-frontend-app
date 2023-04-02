@@ -29,3 +29,6 @@ export { FaAngleDoubleUp } from "react-icons/fa";
 export { FaStar } from "react-icons/fa";
 export { FaStarHalfAlt } from "react-icons/fa";
 export { FaRegStar } from "react-icons/fa";
+export { FaUser } from "react-icons/fa";
+export { FaTruck } from "react-icons/fa";
+export { FaMapMarker } from "react-icons/fa";

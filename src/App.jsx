@@ -16,11 +16,11 @@ import ProductForm from "./admin/ProductForm/ProductForm";
 import Admin from "./admin/Admin/Admin";
 import Product from "./pages/Product";
 import ProductEdit from "./admin/ProductEdit/ProductEdit";
-import Carts from "./pages/Carts";
+import Carts from "./pages/Carts/Carts";
 import Shipping from "./pages/Shipping";
 import Payment from "./pages/Payment";
-import PlaceOrder from "./pages/PlaceOrder";
-import OrderScreen from "./pages/OrderScreen";
+import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
+import OrderScreen from "./pages/OrderScreen/OrderScreen";
 import PaymentResult from "./pages/PaymentResult";
 import NotFound from "./pages/NotFound";
 

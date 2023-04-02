@@ -1,8 +1,5 @@
-import React from "react";
-import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import { removeFromCart } from "../redux-toolkit/cartSlice";
-import { Laptops, Mobile, Tablets } from "../responsive";
+import { Laptops, Mobile, Tablets } from "../../responsive";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -197,48 +194,3 @@ export const TitleBox = styled.div`
     margin-top: 1rem;
   }
 `;
-
-const CartItems = ({ product, title, price, img, qty }) => {
-  const dispatch = useDispatch();
-
-  const removeItemCart = (product) => {
-    dispatch(removeFromCart(product));
-  };
-
-  let prices = price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-  let total = (price * qty)
-    .toString()
-    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-
-  return (
-    <Wrapper>
-      <ProductGroup>
-        <OrderBtn onClick={() => removeItemCart(product)}>x</OrderBtn>
-        <ImgBox>
-          <Image src={`${process.env.REACT_APP_BASEURL}/${img}`} alt="make" />
-        </ImgBox>
-
-        <InfoBox>
-          <TitleBox>
-            <Title>product</Title>
-            <Title>{title}</Title>
-          </TitleBox>
-          <StockBox>
-            <Stock>Quantity</Stock>
-            <Stock>{qty}</Stock>
-          </StockBox>
-          <PriceBox>
-            <Price>Price</Price>
-            <Price>{prices}</Price>
-          </PriceBox>
-          <PriceBox>
-            <Price>Total</Price>
-            <Price>{total}</Price>
-          </PriceBox>
-        </InfoBox>
-      </ProductGroup>
-    </Wrapper>
-  );
-};
-
-export default CartItems;
