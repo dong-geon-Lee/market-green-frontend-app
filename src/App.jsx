@@ -18,11 +18,11 @@ import Product from "./pages/Product";
 import ProductEdit from "./admin/ProductEdit/ProductEdit";
 import Carts from "./pages/Carts/Carts";
 import Shipping from "./pages/Shipping";
-import Payment from "./pages/Payment";
+import Payment from "./pages/Payment/Payment";
 import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import OrderScreen from "./pages/OrderScreen/OrderScreen";
-import PaymentResult from "./pages/PaymentResult";
-import NotFound from "./pages/NotFound";
+import PaymentResult from "./pages/PaymentResult/PaymentResult";
+import NotFound from "./pages/NotFound/NotFound";
 
 const App = () => {
   const user = useSelector((state) => state.user.user?.accessToken);

@@ -1,7 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
-import { Mobile, Tablets, Laptops } from "../responsive";
+import { Mobile, Tablets, Laptops } from "../../responsive";
 
 export const Container = styled.div`
   width: 100vw;
@@ -76,22 +74,3 @@ export const Button = styled.button`
     marginTop: "0rem",
   })}
 `;
-
-const NotFound = () => {
-  const navigate = useNavigate();
-
-  const onClick = () => {
-    navigate(-1);
-  };
-
-  return (
-    <Container>
-      <Wrapper>
-        <Image src="../assets/page_ready.jpeg"></Image>
-        <Button onClick={() => onClick()}>뒤로가기</Button>
-      </Wrapper>
-    </Container>
-  );
-};
-
-export default NotFound;
