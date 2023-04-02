@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { registerUser, reset } from "../redux-toolkit/userSlice";
 import { useNavigate } from "react-router-dom";
 import { offSpinner, onSpinner } from "../redux-toolkit/spinnerSlice";
-import Spinner from "../components/Spinner";
+import Spinner from "../components/Spinner/Spinner";
 import { Mobile, Tablets } from "../responsive";
 
 export const Container = styled.div`

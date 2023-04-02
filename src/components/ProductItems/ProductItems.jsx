@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { deleteProduct } from "../../redux-toolkit/productSlice";
 import { offSpinner, onSpinner } from "../../redux-toolkit/spinnerSlice";
-import Spinner from "../Spinner";
+import Spinner from "../Spinner/Spinner";
 import StarRating from "../StarRating";
 import * as S from "./styles";
 

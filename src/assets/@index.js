@@ -3,6 +3,7 @@ export { default as image2 } from "../assets/image2.jpg";
 export { default as image3 } from "../assets/image3.jpg";
 export { default as image4 } from "../assets/image4.jpg";
 export { default as logo } from "../assets/logo2.png";
+export { default as image } from "../assets/spinner.gif";
 export { BsTwitter } from "react-icons/bs";
 export { BsInstagram } from "react-icons/bs";
 export { BsFacebook } from "react-icons/bs";

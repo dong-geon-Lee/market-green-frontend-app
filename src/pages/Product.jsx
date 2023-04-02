@@ -11,7 +11,7 @@ import {
 import moment from "moment";
 import SubStarRating from "../components/SubStarRating";
 import { offSpinner, onSpinner } from "../redux-toolkit/spinnerSlice";
-import Spinner from "../components/Spinner";
+import Spinner from "../components/Spinner/Spinner";
 import StarReviews from "../components/StarReviews";
 import { Laptops, Mobile, Tablets } from "../responsive.js";
 

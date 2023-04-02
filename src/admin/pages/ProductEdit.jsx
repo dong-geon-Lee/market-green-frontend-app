@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { updateProduct } from "../../redux-toolkit/productSlice";
-import Spinner from "../../components/Spinner";
+import Spinner from "../../components/Spinner/Spinner";
 import { offSpinner, onSpinner } from "../../redux-toolkit/spinnerSlice";
 import { Mobile } from "../../responsive.js";
 
