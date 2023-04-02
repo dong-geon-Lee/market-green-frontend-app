@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProductForm from "./admin/ProductForm/ProductForm";
 import Admin from "./admin/Admin/Admin";
@@ -28,7 +23,6 @@ import Header from "./components/Header/Header";
 import ProtectedRoute from "./ProtectedRoute";
 
 const App = () => {
-  const user = useSelector((state) => state.user.user?.accessToken);
   const admin = useSelector((state) => state.user.user?.isAdmin);
 
   return (
@@ -74,35 +68,6 @@ const App = () => {
           element={<ProtectedRoute element={<ProductEdit />} isAdmin={admin} />}
         />
         <Route path="/notFound" element={<NotFound />} />
-        {/* <Route
-          path="/placeorder"
-          element={user ? <PlaceOrder  /> : <Navigate replace to="/" />}
-        />
-        <Route
-          path="/order/:id"
-          element={user ? <OrderScreen /> : <Navigate replace to="/" />}
-        />
-        <Route
-          path="/profile"
-          element={user ? <Profile /> : <Navigate replace to="/" />}
-        />
-        <Route path="/paymentResult" element={<PaymentResult />} />
-        <Route
-          path="/profileEdit"
-          element={user ? <ProfileEdit /> : <Navigate replace to="/" />}
-        />
-        <Route
-          path="/admin"
-          element={admin ? <Admin /> : <Navigate replace to="/" />}
-        />
-        <Route
-          path="/productForm"
-          element={admin ? <ProductForm /> : <Navigate replace to="/" />}
-        />
-        <Route
-          path="/productEdit"
-          element={admin ? <ProductEdit /> : <Navigate replace to="/" />}
-        /> */}
       </Routes>
     </Router>
   );
