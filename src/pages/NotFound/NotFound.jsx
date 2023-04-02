@@ -12,7 +12,7 @@ const NotFound = () => {
   return (
     <S.Container>
       <S.Wrapper>
-        <S.Image src="../assets/page_ready.jpeg"></S.Image>
+        <S.Image src="../assets/page_ready.jpeg" />
         <S.Button onClick={() => onClick()}>뒤로가기</S.Button>
       </S.Wrapper>
     </S.Container>

@@ -1,9 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
-import ProductForm from "./admin/ProductForm/ProductForm";
-import Admin from "./admin/Admin/Admin";
-import ProductEdit from "./admin/ProductEdit/ProductEdit";
+import { Admin, ProductEdit, ProductForm } from "./admin";
 import {
   Carts,
   Home,
@@ -38,6 +36,7 @@ const App = () => {
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/paymentResult" element={<PaymentResult />} />
+        <Route path="/notFound" element={<NotFound />} />
         <Route
           path="/placeorder"
           element={<ProtectedRoute element={<PlaceOrder />} />}
@@ -50,7 +49,6 @@ const App = () => {
           path="/profile"
           element={<ProtectedRoute element={<Profile />} />}
         />
-
         <Route
           path="/profileEdit"
           element={<ProtectedRoute element={<ProfileEdit />} />}
@@ -67,7 +65,6 @@ const App = () => {
           path="/productEdit"
           element={<ProtectedRoute element={<ProductEdit />} isAdmin={admin} />}
         />
-        <Route path="/notFound" element={<NotFound />} />
       </Routes>
     </Router>
   );
