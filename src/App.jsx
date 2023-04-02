@@ -62,15 +62,15 @@ const App = () => {
         />
         <Route
           path="/admin"
-          element={<ProtectedRoute element={<Admin />} isAdmin />}
+          element={<ProtectedRoute element={<Admin />} isAdmin={admin} />}
         />
         <Route
           path="/productForm"
-          element={<ProtectedRoute element={<ProductForm />} isAdmin />}
+          element={<ProtectedRoute element={<ProductForm />} isAdmin={admin} />}
         />
         <Route
           path="/productEdit"
-          element={<ProtectedRoute element={<ProductEdit />} isAdmin />}
+          element={<ProtectedRoute element={<ProductEdit />} isAdmin={admin} />}
         />
 
         {/* <Route
