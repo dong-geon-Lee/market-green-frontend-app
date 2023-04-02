@@ -10,9 +10,9 @@ import {
 } from "../redux-toolkit/productSlice";
 import moment from "moment";
 import Spinner from "../components/Spinner/Spinner";
+import SubStarRating from "../components/SubStarRating/SubStarRating";
 import StarRating from "../components/StarRating/StarRating";
 import { Laptops, Mobile, Tablets } from "../responsive.js";
-import SubStarRating from "../components/SubStarRating";
 
 export const Container = styled.div`
   display: flex;
@@ -531,7 +531,7 @@ const Product = () => {
                       x
                     </Button>
                   </ReviewInfo>
-                  <SubStarRating value={review.rating} />
+                  <StarRating value={review.rating} />
 
                   <ReviewDate>{moment(review.createdAt).calendar()}</ReviewDate>
 
@@ -568,7 +568,7 @@ const Product = () => {
             <RatingBox>
               <Rating>평점</Rating>
 
-              <StarRating
+              <SubStarRating
                 value={product?.rating?.toFixed(1)}
                 totalRating={totalRating}
               />
