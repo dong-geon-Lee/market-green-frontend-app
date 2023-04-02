@@ -59,6 +59,8 @@ export const LogoTitle = styled.p`
   margin-left: 1rem;
 `;
 
+export const Div = styled.div``;
+
 export const NavList = styled.ul`
   list-style: none;
   display: flex;

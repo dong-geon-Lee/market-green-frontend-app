@@ -7,7 +7,6 @@ import {
   deleteShipping,
   deletePaymentMethod,
 } from "../../redux-toolkit/cartSlice.js";
-import logo from "../../assets/logo2.png";
 import * as S from "./styles";
 import * as A from "../../assets/@index";
 
@@ -67,7 +66,7 @@ const Header = () => {
     <S.Container>
       <S.LogoHome onClick={() => homeLink()}>
         <S.LogoBox>
-          <S.Logo src={logo} alt="logo-img" />
+          <S.Logo src={A.logo} alt="logo-img" />
           <S.LogoTitle>MarketGreen</S.LogoTitle>
         </S.LogoBox>
       </S.LogoHome>
@@ -128,12 +127,12 @@ const Header = () => {
                   </S.AdminBox>
                 ) : (
                   <>
-                    <div onClick={() => loginLink()}>
+                    <S.Div onClick={() => loginLink()}>
                       <S.Button>로그인</S.Button>
-                    </div>
-                    <div onClick={() => registerLink()}>
+                    </S.Div>
+                    <S.Div onClick={() => registerLink()}>
                       <S.Button>회원가입</S.Button>
-                    </div>
+                    </S.Div>
                   </>
                 )}
               </S.BtnBox>

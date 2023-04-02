@@ -1,6 +1,6 @@
 import React from "react";
-import * as S from "./styles";
 import { plantsData } from "../../data/productDummy";
+import * as S from "./styles";
 
 const Gallery = () => {
   return (
