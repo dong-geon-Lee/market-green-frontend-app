@@ -26,3 +26,6 @@ export { FaBook } from "react-icons/fa";
 export { FaSeedling } from "react-icons/fa";
 export { FaHandHoldingWater } from "react-icons/fa";
 export { FaAngleDoubleUp } from "react-icons/fa";
+export { FaStar } from "react-icons/fa";
+export { FaStarHalfAlt } from "react-icons/fa";
+export { FaRegStar } from "react-icons/fa";

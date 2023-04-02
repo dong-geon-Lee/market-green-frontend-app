@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { deleteProduct } from "../../redux-toolkit/productSlice";
 import { offSpinner, onSpinner } from "../../redux-toolkit/spinnerSlice";
 import Spinner from "../Spinner/Spinner";
-import StarRating from "../StarRating";
+import StarRating from "../StarRating/StarRating";
 import * as S from "./styles";
 
 const ProductItems = ({ _id, title, desc, price, img, inStock, rating }) => {
