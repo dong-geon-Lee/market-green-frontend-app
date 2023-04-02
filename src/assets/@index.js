@@ -21,3 +21,6 @@ export { SiWebhint } from "react-icons/si";
 export { FaEnvira } from "react-icons/fa";
 export { FaPhotoVideo } from "react-icons/fa";
 export { BsFillImageFill } from "react-icons/bs";
+export { FaBook } from "react-icons/fa";
+export { FaSeedling } from "react-icons/fa";
+export { FaHandHoldingWater } from "react-icons/fa";

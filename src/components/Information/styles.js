@@ -1,7 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { Laptops, Mobile, Tablets } from "../responsive";
+import { Laptops, Mobile, Tablets } from "../../responsive";
 
 export const Container = styled.div`
   max-width: 130rem;
@@ -141,28 +139,3 @@ export const Button = styled.button`
 export const Div = styled.div``;
 
 export const LinkBtn = styled.a``;
-
-const Information = () => {
-  const navigate = useNavigate();
-
-  const notFoundLink = () => {
-    navigate("/notFound");
-  };
-
-  return (
-    <Container id="information">
-      <MainText>Promotion</MainText>
-      <Wrapper>
-        <Content></Content>
-        <InformationBox>
-          <Title>Get More plants</Title>
-          <Div onClick={() => notFoundLink()}>
-            <Button>More Information</Button>
-          </Div>
-        </InformationBox>
-      </Wrapper>
-    </Container>
-  );
-};
-
-export default Information;

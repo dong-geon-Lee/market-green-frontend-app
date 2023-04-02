@@ -161,10 +161,6 @@ export const TextLink = styled.a`
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-
-  &:hover {
-    font-weight: 600;
-  }
 `;
 
 export const TextBox = styled.div`

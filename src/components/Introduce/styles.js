@@ -1,9 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import { FaBook } from "react-icons/fa";
-import { FaSeedling } from "react-icons/fa";
-import { FaHandHoldingWater } from "react-icons/fa";
-import { Mobile, Tablets } from "../responsive";
+import { Mobile, Tablets } from "../../responsive";
 
 export const Container = styled.div`
   max-width: 130rem;
@@ -181,44 +177,3 @@ export const RightDetail = styled.div``;
 export const RightImgBox = styled.div``;
 
 export const RightImage = styled.img``;
-
-const Introduce = () => {
-  return (
-    <Container id="intro">
-      <Wrapper>
-        <IntroBox>
-          <Title>당신의 정원을 만들어보세요!</Title>
-          <Text>
-            "<Strong>마켓그린에서</Strong> 여러분의 식물을 얻으세요"
-          </Text>
-        </IntroBox>
-
-        <ContentBox>
-          <IconInfoBox>
-            <FaBook></FaBook>
-            <TitleInfo>Infomation</TitleInfo>
-            <TextInfo>
-              다양한 희귀식물에 대한 교육 콘텐츠를 제공합니다.
-            </TextInfo>
-          </IconInfoBox>
-
-          <IconInfoBox>
-            <FaSeedling></FaSeedling>
-            <TitleInfo>Product</TitleInfo>
-            <TextInfo>아름답고 예쁜 식물로 최고의 경험을 선사합니다.</TextInfo>
-          </IconInfoBox>
-
-          <IconInfoBox>
-            <FaHandHoldingWater></FaHandHoldingWater>
-            <TitleInfo>Advice</TitleInfo>
-            <TextInfo>
-              식물을 키우는 데 필요한 전문가의 조언을 제공합니다.
-            </TextInfo>
-          </IconInfoBox>
-        </ContentBox>
-      </Wrapper>
-    </Container>
-  );
-};
-
-export default Introduce;
