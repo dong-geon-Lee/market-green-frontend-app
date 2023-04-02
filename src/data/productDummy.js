@@ -140,7 +140,7 @@ export const plantsData = [
     id: 1,
     name: "애둘리스61",
     image:
-      "https://m.simpol.co.kr/data/shopimages/product/302417974/202206/0040240000005020522.jpg",
+      "https://user-images.githubusercontent.com/69576865/229329388-98040fbc-0e09-43e8-8838-5e38f9ab8c6a.jpg",
   },
   {
     id: 2,
@@ -170,7 +170,7 @@ export const plantsData = [
     id: 6,
     name: "베고니아 자니타쥬엘(4S)",
     image:
-      "https://m.simpol.co.kr/data/shopimages/product/302419380/202205/0030100000000441092.jpg",
+      "https://user-images.githubusercontent.com/69576865/221578826-24d711d0-a2f2-432e-8b9b-e089ea414200.jpg",
   },
   {
     id: 7,
@@ -200,12 +200,13 @@ export const plantsData = [
     id: 11,
     name: "카틀레아(옐로우돌)",
     image:
-      "https://m.simpol.co.kr/data/shopimages/product/302420207/202205/0070030000000091692.jpg",
+      "https://user-images.githubusercontent.com/69576865/229329433-94bf7c19-d28e-47c7-928b-0c907acbebe1.jpg",
   },
   {
     id: 12,
     name: "소엽풍란",
-    image: img6,
+    image:
+      "https://user-images.githubusercontent.com/69576865/221578758-5b9a537e-d94d-4044-a28c-3a5a98d3c90d.jpg",
   },
   {
     id: 13,
