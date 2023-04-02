@@ -1,9 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import { deleteUser, tryAuth } from "../redux-toolkit/userSlice";
-import { useEffect } from "react";
 
 export const Container = styled.div`
   background: linear-gradient(
@@ -56,7 +51,7 @@ export const BtnBox = styled.div`
   gap: 3.2rem;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   display: block;
   padding: 1.6rem;
   border: none;
@@ -116,53 +111,3 @@ export const UserText = styled.p`
   color: #343a40;
   height: 100%;
 `;
-
-const Profile = () => {
-  const { _id, name, email } = useSelector((state) => state.user.user);
-
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    dispatch(tryAuth());
-  }, []);
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-
-    dispatch(deleteUser({ id: _id }));
-
-    alert("회원탈퇴 완료");
-    navigate("/");
-  };
-
-  return (
-    <Container>
-      <Wrapper>
-        <Form onSubmit={onSubmit}>
-          <Box>
-            <Label>Name</Label>
-            <UserText>{name}</UserText>
-          </Box>
-
-          <Box>
-            <Label>E-mail</Label>
-            <UserText>{email}</UserText>
-          </Box>
-
-          <BtnBox>
-            <LinkBox>
-              <Link to="/profileEdit">프로필 변경</Link>
-            </LinkBox>
-            <LinkBox>
-              <Link to="/paymentResult">결제 내역</Link>
-            </LinkBox>
-            <Button type="submit">회원 탈퇴</Button>
-          </BtnBox>
-        </Form>
-      </Wrapper>
-    </Container>
-  );
-};
-
-export default Profile;

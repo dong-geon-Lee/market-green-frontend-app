@@ -9,9 +9,9 @@ import {
 import Register from "./pages/Register";
 import Login from "./pages/Login/Login";
 import Header from "./components/Header/Header";
-import Profile from "./pages/Profile";
+import Profile from "./pages/Profile/Profile";
 import { useSelector } from "react-redux";
-import ProfileEdit from "./pages/ProfileEdit";
+import ProfileEdit from "./pages/ProfileEdit/ProfileEdit";
 import ProductForm from "./admin/ProductForm/ProductForm";
 import Admin from "./admin/Admin/Admin";
 import Product from "./pages/Product/Product";
