@@ -13,7 +13,7 @@ import Profile from "./pages/Profile";
 import { useSelector } from "react-redux";
 import ProfileEdit from "./pages/ProfileEdit";
 import ProductForm from "./admin/pages/ProductForm";
-import Admin from "./admin/pages/Admin";
+import Admin from "./admin/pages/Admin/Admin";
 import Product from "./pages/Product";
 import ProductEdit from "./admin/pages/ProductEdit";
 import Carts from "./pages/Carts";
