@@ -43,7 +43,7 @@ const App = () => {
         <Route path="/cart" element={<Carts />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/payment" element={<Payment />} />
-        <Route path="/notFound" element={<NotFound />} />
+        <Route path="/paymentResult" element={<PaymentResult />} />
         <Route
           path="/placeorder"
           element={<ProtectedRoute element={<PlaceOrder />} />}
@@ -56,6 +56,7 @@ const App = () => {
           path="/profile"
           element={<ProtectedRoute element={<Profile />} />}
         />
+
         <Route
           path="/profileEdit"
           element={<ProtectedRoute element={<ProfileEdit />} />}
@@ -72,7 +73,7 @@ const App = () => {
           path="/productEdit"
           element={<ProtectedRoute element={<ProductEdit />} isAdmin={admin} />}
         />
-
+        <Route path="/notFound" element={<NotFound />} />
         {/* <Route
           path="/placeorder"
           element={user ? <PlaceOrder  /> : <Navigate replace to="/" />}
