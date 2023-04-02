@@ -20,7 +20,7 @@ const StarRating = ({ value }) => {
           return icon;
         })}
       </S.Rating>
-      <S.ReviewNum>({value.toFixed(1)})</S.ReviewNum>
+      <S.ReviewNum>({value?.toFixed(1)})</S.ReviewNum>
     </S.RatingBox>
   );
 };
