@@ -7,7 +7,7 @@ import Products from "../components/Products/Products";
 import Testimonials from "../components/Testimonials";
 import Gallery from "../components/Gallery/Gallery";
 import Footer from "../components/Footer/Footer";
-import ScrollToTop from "../components/ScrollToTop";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 const Home = () => {
   return (

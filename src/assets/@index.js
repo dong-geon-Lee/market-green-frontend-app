@@ -24,3 +24,4 @@ export { BsFillImageFill } from "react-icons/bs";
 export { FaBook } from "react-icons/fa";
 export { FaSeedling } from "react-icons/fa";
 export { FaHandHoldingWater } from "react-icons/fa";
+export { FaAngleDoubleUp } from "react-icons/fa";
