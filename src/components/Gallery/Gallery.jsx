@@ -9,7 +9,7 @@ const Gallery = () => {
       <S.Wrapper>
         {plantsData.map((items, index) => (
           <S.ImageBox className={`item${index + 1}`}>
-            <S.Image src={items[index]?.image} alt={items[index]?.id} />
+            <S.Image src={items.image} alt={items.id} />
           </S.ImageBox>
         ))}
         <S.ImageBox className="item14">
