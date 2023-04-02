@@ -1,8 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import Carousel from "react-elastic-carousel";
-import { userData } from "../data/productDummy";
-import { Mobile, Tablets } from "../responsive";
+import { Mobile, Tablets } from "../../responsive";
 
 export const Container = styled.div`
   max-width: 100rem;
@@ -146,35 +143,3 @@ export const SlideBox = styled.div`
     border-bottom-right-radius: 1rem;
   }
 `;
-
-const Testimonials = () => {
-  return (
-    <Container id="testimonials">
-      <Wrapper>
-        <Title>Customer Reviews</Title>
-        <Content>
-          <SlideBox></SlideBox>
-          <UserBox>
-            <Carousel>
-              {userData.map((data) => (
-                <UserInfo key={data.id}>
-                  <UserImage>
-                    <Image src={data.avatar} alt="pic1"></Image>
-                  </UserImage>
-                  <User>
-                    <UserTitle>{data.name}</UserTitle>
-                    <UserJob>{data.designation}</UserJob>
-                    <UserText>{data.message}</UserText>
-                  </User>
-                </UserInfo>
-              ))}
-            </Carousel>
-          </UserBox>
-          <SlideBox />
-        </Content>
-      </Wrapper>
-    </Container>
-  );
-};
-
-export default Testimonials;

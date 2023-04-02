@@ -12,6 +12,7 @@ import moment from "moment";
 import Spinner from "../components/Spinner/Spinner";
 import StarRating from "../components/StarRating/StarRating";
 import { Laptops, Mobile, Tablets } from "../responsive.js";
+import SubStarRating from "../components/SubStarRating";
 
 export const Container = styled.div`
   display: flex;
@@ -530,7 +531,7 @@ const Product = () => {
                       x
                     </Button>
                   </ReviewInfo>
-                  <StarRating value={review.rating}></StarRating>
+                  <SubStarRating value={review.rating} />
 
                   <ReviewDate>{moment(review.createdAt).calendar()}</ReviewDate>
 
