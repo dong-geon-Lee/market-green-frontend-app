@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux-toolkit/productSlice";
 import ProductItems from "../ProductItems/ProductItems";
@@ -43,7 +43,7 @@ const Products = () => {
   const [filter, setFilter] = useState("all");
   const [price, setPrice] = useState("all");
 
-  const getProductList = () => {
+  const getProductList = useMemo(() => {
     const filterCallBack = (item) => {
       if (filter === "good") {
         return parseInt(item.rating) >= 4;
@@ -67,13 +67,13 @@ const Products = () => {
         : copyList.filter((data) => filterCallBack(data));
     const sortedList = filteredList.sort(comparePrice);
     return sortedList;
-  };
+  });
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (products) dispatch(getProducts());
-  }, [dispatch]);
+  }, [dispatch, filter, price, products, productList]);
 
   return (
     <S.Container id="products">
@@ -92,7 +92,7 @@ const Products = () => {
       </S.SelectBox>
       <S.Wrapper>
         <Carousel breakPoints={breakPoints}>
-          {getProductList().map((data) => (
+          {getProductList.map((data) => (
             <ProductItems key={data._id} {...data} />
           ))}
         </Carousel>
