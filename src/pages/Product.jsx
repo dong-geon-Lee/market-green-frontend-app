@@ -12,7 +12,8 @@ import moment from "moment";
 import SubStarRating from "../components/SubStarRating";
 import { offSpinner, onSpinner } from "../redux-toolkit/spinnerSlice";
 import Spinner from "../components/Spinner/Spinner";
-import StarReviews from "../components/StarReviews";
+// import StarReviews from "../components/StarReviews";
+import StarRating from "../components/StarRating/StarRating";
 import { Laptops, Mobile, Tablets } from "../responsive.js";
 
 export const Container = styled.div`
@@ -532,7 +533,7 @@ const Product = () => {
                       x
                     </Button>
                   </ReviewInfo>
-                  <StarReviews value={review.rating}></StarReviews>
+                  <StarRating value={review.rating}></StarRating>
 
                   <ReviewDate>{moment(review.createdAt).calendar()}</ReviewDate>
 
