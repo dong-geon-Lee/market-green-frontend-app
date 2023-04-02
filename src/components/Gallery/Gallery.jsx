@@ -7,10 +7,12 @@ const Gallery = () => {
     <S.Container id="gallery">
       <S.Title>Gallery</S.Title>
       <S.Wrapper>
-        <S.ImageBox className="item1">
-          <S.Image src={plantsData[0].image} alt={plantsData[0].id} />
-        </S.ImageBox>
-        <S.ImageBox className="item2">
+        {plantsData.map((items, index) => (
+          <S.ImageBox className={`item${index + 1}`}>
+            <S.Image src={items[index].image} alt={items[index].id} />
+          </S.ImageBox>
+        ))}
+        {/* <S.ImageBox className="item2">
           <S.Image src={plantsData[1].image} alt={plantsData[1].id} />
         </S.ImageBox>
         <S.ImageBox className="item3">
@@ -45,7 +47,7 @@ const Gallery = () => {
         </S.ImageBox>
         <S.ImageBox className="item13">
           <S.Image src={plantsData[12].image} alt={plantsData[11].id} />
-        </S.ImageBox>
+        </S.ImageBox> */}
         <S.ImageBox className="item14">
           <S.Image src={plantsData[11].image} alt={plantsData[11].id} />
         </S.ImageBox>
