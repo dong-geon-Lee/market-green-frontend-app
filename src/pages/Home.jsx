@@ -1,6 +1,6 @@
 import React from "react";
 import About from "../components/About/About";
-import Hero from "../components/Hero";
+import Hero from "../components/Hero/Hero";
 import Information from "../components/Information";
 import Introduce from "../components/Introduce";
 import Products from "../components/Products";

@@ -1,6 +1,5 @@
-import React from "react";
 import styled from "styled-components";
-import { Laptops, Mobile, Tablets } from "../responsive";
+import { Laptops, Mobile, Tablets } from "../../responsive";
 
 export const Container = styled.div`
   display: flex;
@@ -161,50 +160,3 @@ export const Button = styled.button`
     }
   }
 `;
-
-const Hero = () => {
-  const allLinks = document.querySelectorAll("a:link");
-
-  allLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const href = link.getAttribute("href");
-
-      if (href === "#") {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-
-      if (href !== "#" && href.startsWith("#")) {
-        const sectionEl = document.querySelector(href);
-        sectionEl.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
-
-  return (
-    <Container id="hero">
-      <Wrapper>
-        <InfoBox>
-          <Title>Freshen the Air in Your House</Title>
-          <Text>
-            정원 만들기의 꿈을 실현할 수 있도록 도와드립니다. 세상을 바꿀 수
-            있는 작은 것부터 시작합시다.
-          </Text>
-          <BtnBox>
-            <Atag href="#products">
-              <Button>Start find plant</Button>
-            </Atag>
-            <Atag href="#information">
-              <Button>Learn more</Button>
-            </Atag>
-          </BtnBox>
-        </InfoBox>
-      </Wrapper>
-    </Container>
-  );
-};
-
-export default Hero;
