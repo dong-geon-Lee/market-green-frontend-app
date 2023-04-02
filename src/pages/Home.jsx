@@ -3,7 +3,7 @@ import About from "../components/About/About";
 import Hero from "../components/Hero/Hero";
 import Information from "../components/Information/Information";
 import Introduce from "../components/Introduce/Introduce";
-import Products from "../components/Products";
+import Products from "../components/Products/Products";
 import Testimonials from "../components/Testimonials";
 import Gallery from "../components/Gallery/Gallery";
 import Footer from "../components/Footer/Footer";
