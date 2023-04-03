@@ -8,7 +8,7 @@ const Gallery = () => {
       <S.Title>Gallery</S.Title>
       <S.Wrapper>
         {plantsData.map((items, index) => (
-          <S.ImageBox className={`item${index + 1}`}>
+          <S.ImageBox key={items.id} className={`item${index + 1}`}>
             <S.Image src={items.image} alt={items.id} />
           </S.ImageBox>
         ))}

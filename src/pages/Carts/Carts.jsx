@@ -6,8 +6,15 @@ import CartItems from "../CartItems/CartItems";
 import * as S from "./styles";
 
 const Carts = () => {
-  const cart = useSelector((state) => state.cart);
-  const { cartItems } = cart;
+  const cart = useSelector((state) => state.cart.cartItems);
+
+  const cartItems = new Intl.NumberFormat("ko-KR", {
+    maximumSignificantDigits: 3,
+  }).format(cart);
+
+  const total = cartItems?.reduce((acc, item) => {
+    return acc + item.quantity * item.price;
+  }, 0);
 
   const id = useParams();
   const location = useLocation();
@@ -42,7 +49,6 @@ const Carts = () => {
         <S.TotalCartItem>
           <S.Title>장바구니 ({cartItems ? cartItems?.length : 0})</S.Title>
         </S.TotalCartItem>
-
         {cartItems.length === 0 ? (
           <>
             <S.Title>카트에 제품을 추가해주세요</S.Title>
@@ -57,22 +63,12 @@ const Carts = () => {
             {cartItems?.map((cart, index) => (
               <CartItems key={index} {...cart} qty={cart.quantity} />
             ))}
-
             <S.Wrapper>
               <S.TotalBox>
                 <S.Total>TOTAL :</S.Total>
-                <S.TotalText>
-                  {cartItems
-                    ?.reduce((acc, item) => {
-                      return acc + item.quantity * item.price;
-                    }, 0)
-                    .toString()
-                    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}
-                  원
-                </S.TotalText>
+                <S.TotalText>{total}원</S.TotalText>
               </S.TotalBox>
             </S.Wrapper>
-
             <S.CartButtonGroup>
               <S.CartLink to="/">쇼핑하기</S.CartLink>
               <S.Button onClick={() => onClickHandler()}>결제하기</S.Button>
