@@ -40,9 +40,9 @@ const PaymentResult = () => {
                     : moment().format()?.split("T")[0]}
                 </td>
                 <td>
-                  {data.totalPrice
-                    .toString()
-                    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}{" "}
+                  {new Intl.NumberFormat("Ko-KR", {
+                    maximumSignificantDigits: 3,
+                  }).format(data.totalPrice)}{" "}
                   원
                 </td>
                 <td>

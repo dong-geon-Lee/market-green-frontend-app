@@ -178,9 +178,9 @@ const PlaceOrder = () => {
             <S.TotalLabel>Products</S.TotalLabel>
             <S.TotalSpan>
               +{" "}
-              {itemsPrice
-                .toString()
-                .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}{" "}
+              {new Intl.NumberFormat("Ko-KR", {
+                maximumSignificantDigits: 3,
+              }).format(itemsPrice)}{" "}
               원
             </S.TotalSpan>
           </S.TotalBox>
@@ -189,9 +189,9 @@ const PlaceOrder = () => {
             <S.TotalLabel>Shipping</S.TotalLabel>
             <S.TotalSpan>
               +{" "}
-              {shippingPrice
-                .toString()
-                .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}{" "}
+              {new Intl.NumberFormat("Ko-KR", {
+                maximumSignificantDigits: 3,
+              }).format(shippingPrice)}{" "}
               원
             </S.TotalSpan>
           </S.TotalBox>
@@ -200,9 +200,9 @@ const PlaceOrder = () => {
             <S.TotalLabel>Discount</S.TotalLabel>
             <S.TotalSpan>
               -{" "}
-              {taxPrice
-                .toString()
-                .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}{" "}
+              {new Intl.NumberFormat("Ko-KR", {
+                maximumSignificantDigits: 3,
+              }).format(taxPrice)}{" "}
               원
             </S.TotalSpan>
           </S.TotalBox>
@@ -210,9 +210,9 @@ const PlaceOrder = () => {
           <S.TotalBox>
             <S.TotalLabel>Total</S.TotalLabel>
             <S.TotalSpan>
-              {totalPrice
-                .toString()
-                .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}{" "}
+              {new Intl.NumberFormat("Ko-KR", {
+                maximumSignificantDigits: 3,
+              }).format(totalPrice)}{" "}
               원
             </S.TotalSpan>
           </S.TotalBox>
