@@ -10,10 +10,13 @@ const CartItems = ({ product, title, price, img, qty }) => {
     dispatch(removeFromCart(product));
   };
 
-  let prices = price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-  let total = (price * qty)
-    .toString()
-    .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+  let prices = new Intl.NumberFormat("ko-KR", {
+    maximumSignificantDigits: 3,
+  }).format(price);
+
+  let total = new Intl.NumberFormat("Ko-KR", {
+    maximumSignificantDigits: 3,
+  }).format(price * qty);
 
   return (
     <S.Wrapper>
