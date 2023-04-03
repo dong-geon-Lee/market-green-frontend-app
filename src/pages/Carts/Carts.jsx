@@ -6,15 +6,14 @@ import CartItems from "../CartItems/CartItems";
 import * as S from "./styles";
 
 const Carts = () => {
-  const cart = useSelector((state) => state.cart.cartItems);
-
-  const cartItems = new Intl.NumberFormat("ko-KR", {
+  const cartLists = useSelector((state) => state.cart?.cartItems);
+  const total = new Intl.NumberFormat("ko-KR", {
     maximumSignificantDigits: 3,
-  }).format(cart);
-
-  const total = cartItems?.reduce((acc, item) => {
-    return acc + item.quantity * item.price;
-  }, 0);
+  }).format(
+    cartLists?.reduce((acc, item) => {
+      return acc + item.quantity * item.price;
+    }, 0)
+  );
 
   const id = useParams();
   const location = useLocation();
@@ -47,9 +46,9 @@ const Carts = () => {
     <S.Container>
       <S.Group>
         <S.TotalCartItem>
-          <S.Title>장바구니 ({cartItems ? cartItems?.length : 0})</S.Title>
+          <S.Title>장바구니 ({cartLists ? cartLists?.length : 0})</S.Title>
         </S.TotalCartItem>
-        {cartItems.length === 0 ? (
+        {cartLists.length === 0 ? (
           <>
             <S.Title>카트에 제품을 추가해주세요</S.Title>
             <S.CartButtonGroup>
@@ -60,7 +59,7 @@ const Carts = () => {
           </>
         ) : (
           <>
-            {cartItems?.map((cart, index) => (
+            {cartLists?.map((cart, index) => (
               <CartItems key={index} {...cart} qty={cart.quantity} />
             ))}
             <S.Wrapper>
