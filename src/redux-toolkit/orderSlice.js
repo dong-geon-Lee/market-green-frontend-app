@@ -164,7 +164,6 @@ const orderSlice = createSlice({
     },
     [getUserOrders.fulfilled]: (state, action) => {
       state.loading = false;
-      // state.orders.push(...action.payload);
       state.orders = action.payload;
       state.error = false;
     },

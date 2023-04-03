@@ -277,20 +277,8 @@ const productSlice = createSlice({
       state.isLoading = true;
     },
     [addReview.fulfilled]: (state, action) => {
-      console.log(action.payload, "review ");
-
       state.isLoading = false;
       state.product = [action.payload].map((data) => data);
-
-      //      state.products.map((data) => {
-      //   if (data._id === id) {
-      //     data.img = img;
-      //     data.title = title;
-      //     data.desc = desc;
-      //     data.price = price;
-      //     data.inStock = inStock;
-      //   }
-      // });
       state.error = false;
     },
     [addReview.rejected]: (state, action) => {

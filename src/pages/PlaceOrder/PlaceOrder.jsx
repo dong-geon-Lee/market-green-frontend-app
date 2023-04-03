@@ -161,9 +161,9 @@ const PlaceOrder = () => {
                   <S.PriceBox>
                     <S.TitleText>Price</S.TitleText>
                     <S.Price>
-                      {item.price
-                        .toString()
-                        .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}
+                      {new Intl.NumberFormat("Ko-KR", {
+                        maximumSignificantDigits: 3,
+                      }).format(item.price)}{" "}
                     </S.Price>
                   </S.PriceBox>
                 </S.InfoListBox>

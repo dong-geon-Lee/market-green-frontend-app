@@ -156,7 +156,11 @@ const OrderScreen = () => {
                   </S.StockBox>
                   <S.PriceBox>
                     <S.TitleText>Price</S.TitleText>
-                    <S.Price>{item.price}</S.Price>
+                    <S.Price>
+                      {new Intl.NumberFormat("Ko-KR", {
+                        maximumSignificantDigits: 3,
+                      }).format(item.price)}
+                    </S.Price>
                   </S.PriceBox>
                 </S.InfoListBox>
               </S.Center>
