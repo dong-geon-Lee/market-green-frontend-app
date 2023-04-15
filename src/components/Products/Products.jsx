@@ -72,7 +72,7 @@ const Products = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (products) dispatch(getProducts());
+    if (products || productList) dispatch(getProducts());
   }, [dispatch, filter, price, products, productList]);
 
   return (
