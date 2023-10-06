@@ -27,7 +27,7 @@ const highOptionList = [
 const ControlMenu = ({ value, onChange, optionList }) => {
   return (
     <select value={value} onChange={(e) => onChange(e.target.value)}>
-      {optionList.map((data, idx) => (
+      {optionList?.map((data, idx) => (
         <option key={idx} value={data.value}>
           {data.name}
         </option>
@@ -65,7 +65,7 @@ const Products = () => {
       filter === "all"
         ? copyList
         : copyList.filter((data) => filterCallBack(data));
-    const sortedList = filteredList.sort(comparePrice);
+    const sortedList = filteredList?.sort(comparePrice);
     return sortedList;
   });
 
@@ -92,7 +92,7 @@ const Products = () => {
       </S.SelectBox>
       <S.Wrapper>
         <Carousel breakPoints={breakPoints}>
-          {getProductList.map((data) => (
+          {getProductList?.map((data) => (
             <ProductItems key={data._id} {...data} />
           ))}
         </Carousel>

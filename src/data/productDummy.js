@@ -214,10 +214,4 @@ export const plantsData = [
     image:
       "https://m.simpol.co.kr/data/shopimages/product/302419990/201905/0050020000001782372.jpg",
   },
-  {
-    id: 14,
-    name: "별수국",
-    image:
-      "https://m.simpol.co.kr/data/shopimages/product/302420316/202205/0030010000000888752.jpg",
-  },
 ];

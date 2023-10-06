@@ -73,10 +73,10 @@ const Product = () => {
               Reviews <S.Strong>({totalReview})</S.Strong>
             </S.ReviewText>
             {product?.reviews?.map((review) => (
-              <S.Review key={review._id}>
+              <S.Review key={review?._id}>
                 <S.ReviewBox>
                   <S.ReviewInfo>
-                    <S.ReviewUser>{review.name}</S.ReviewUser>
+                    <S.ReviewUser>{review?.name}</S.ReviewUser>
                     <S.Button
                       onClick={() =>
                         dispatch(

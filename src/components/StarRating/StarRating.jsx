@@ -8,14 +8,14 @@ const StarRating = ({ value }) => {
   return (
     <S.RatingBox>
       <S.Rating>
-        {startValues.map((starValue) => {
+        {startValues.map((starValue, index) => {
           const icon =
             value >= starValue ? (
-              <A.FaStar />
+              <A.FaStar key={index} />
             ) : value >= starValue - 0.5 ? (
-              <A.FaStarHalfAlt />
+              <A.FaStarHalfAlt key={index} />
             ) : (
-              <A.FaRegStar />
+              <A.FaRegStar key={index} />
             );
           return icon;
         })}
